@@ -16,3 +16,5 @@
 - Automated the above requirement using Selenium Webdriver, Java, Maven project and TestNG framework.
 
 ## How to Run
+
+-clone the project using
