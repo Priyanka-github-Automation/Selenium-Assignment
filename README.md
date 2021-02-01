@@ -17,7 +17,7 @@
 
 ## Prerequisites to run on your local machine
 - Java version 8 or higher.
-- Maven installed on machine to compile and run from the command line or an IDE like Eclipse/IntelliJ to compile and run. 
+- Maven installed on machine to compile and run from the command line or an IDE like Eclipse to compile and run. 
 - Chrome driver and gecko driver executable files.
 
 
