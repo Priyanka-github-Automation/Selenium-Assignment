@@ -1,8 +1,10 @@
 package resources.base.com.amazon;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -31,8 +33,10 @@ public class Base {
 		try
 		{
 			prop = new Properties();
-			FileInputStream fs = new FileInputStream("/Users/priyankakodeboina/Documents/Selenium_POM_Assignment"
-				+ "/Selenium-POM/src/main/java/resources/base/com/amazon/BaseConfig.properties");
+			//FileInputStream fs = new FileInputStream("BaseConfig.properties");
+			ClassLoader classLoader = getClass().getClassLoader();
+			File file = new File(classLoader.getResource("BaseConfig.properties").getFile());
+		    FileInputStream fs = new FileInputStream(file);
 			prop.load(fs);
 		}
 			catch(FileNotFoundException e)
@@ -54,13 +58,13 @@ public class Base {
 			
 			if (browserName.equalsIgnoreCase("chrome"))
 			{
-				System.setProperty("webdriver.chrome.driver", "/Users/priyankakodeboina/Documents/Selenium/Webdrivers/chromedriver");
+				System.setProperty("webdriver.chrome.driver", prop.getProperty("chromeDriver"));
 				driver = new ChromeDriver();
 			}
 			
 			if (browserName.equalsIgnoreCase("firefox"))
 			{
-				System.setProperty("webdriver.gecko.driver", "/Users/priyankakodeboina/Documents/Selenium/Webdrivers/geckodriver");
+				System.setProperty("webdriver.gecko.driver", prop.getProperty("geckoDriver"));
 				driver = new FirefoxDriver();
 				driver.manage().window().maximize();
 			}
