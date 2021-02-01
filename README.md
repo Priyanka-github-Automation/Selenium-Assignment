@@ -15,6 +15,15 @@
 
 - Automated the above requirement using Selenium Webdriver, Java, Maven project and TestNG framework.
 
+## Prerequisites to run on your local machine
+- Java version 8 or higher.
+- Maven installed on machine to compile and run from the command line or an IDE like Eclipse/IntelliJ to compile and run. 
+- Chrome driver and gecko driver executable files.
+
+
 ## How to Run
 
--clone the project using
+- clone the project from https://github.com/Priyanka-github-Automation/Selenium-Assignment.git to your local machine.
+- In the src/test/resources/Baseconfig.properties file, change the values of attributes "chromeDriver" and "geckoDriver" to match the path of browser drivers' executable files in your local machine.
+- To run from the command line, in the terminal, navigate to the corresponding folder and give the maven command 'mvn test'.
+- To run in an IDE, import the project into your IDE, open the TestNG.xml file in the path src/test/resources and run as TestNG Suite
