@@ -24,6 +24,6 @@
 ## How to Run
 
 - clone the project from https://github.com/Priyanka-github-Automation/Selenium-Assignment.git to your local machine.
-- *In the src/test/resources/Baseconfig.properties file, change the values of attributes "chromeDriver" and "geckoDriver" to match the path of browser drivers' executable files in your local machine.*
+- **In the src/test/resources/Baseconfig.properties file, change the values of attributes "chromeDriver" and "geckoDriver" to match the path of browser drivers' executable files in your local machine.**
 - To run from the command line, in the terminal, navigate to the corresponding folder and give the maven command 'mvn test'.
 - To run in an IDE, import the project into your IDE, open the TestNG.xml file in the path src/test/resources and run as TestNG Suite
